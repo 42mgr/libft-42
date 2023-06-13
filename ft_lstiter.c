@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * Applies the function `f` to each element of the linked list `lst`.
+ *
+ * @param lst The linked list to iterate over.
+ * @param f The function to apply to each element of the linked list.
+ *          The function must take a void pointer as its parameter.
+ *          The value pointed to by the void pointer is the content of the
+ *          current element of the linked list.
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)

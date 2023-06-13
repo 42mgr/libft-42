@@ -12,6 +12,30 @@
 
 #include "libft.h"
 
+/**
+ * Applies the function 'f' to each element of the linked list 'lst' and creates
+ * a new list with the results. The 'del' function is used to delete the content
+ * of an element if needed. If the allocation of a new element fails, the 'del'
+ * function is used to delete the content of all the elements created so far and
+ * the function returns NULL.
+ *
+ * @param lst The linked list to iterate over.
+ * @param f The function to apply to each element.
+ * @param del The function to delete the content of an element if needed. For
+ * example, if the linked list contains dynamically allocated memory that needs
+ * to be freed, the 'del' function should be implemented to free that memory.
+ * @return The new list with the results of the 'f' function applied to each
+ * element, or NULL if the allocation of a new element fails.
+ *
+ * @code
+ * void *my_del(void *content)
+ * {
+ *     free(content);
+ * }
+ *
+ * t_list *my_lstmap = ft_lstmap(lst, my_function, my_del);
+ * @endcode
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*ret;

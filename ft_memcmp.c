@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * @brief Compare two memory blocks.
+ *
+ * @param s1 Pointer to the first memory block.
+ * @param s2 Pointer to the second memory block.
+ * @param n Number of bytes to compare.
+ *
+ * @return An integer greater than, equal to, or less than 0, according to the
+ *         result of the comparison.
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;

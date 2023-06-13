@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/**
+ * @brief Concatenates two strings into a new string.
+ *
+ * @param s1 The first string to concatenate.
+ * @param s2 The second string to concatenate.
+ *
+ * @return The new string that is the result of concatenating s1 and s2, or 
+ * NULL if the allocation fails.
+ *
+ * @warning The returned string must be freed with free() when it is no longer 
+ * needed.
+ * @warning If s1 or s2 is NULL, the behavior is undefined.
+ * @warning If the concatenation of s1 and s2 results in a string that exceeds 
+ * the maximum size of a string, the behavior is undefined.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1_len;

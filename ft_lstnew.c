@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates and returns a new element of a linked list.
+ *
+ * @param content The content to be added to the new element.
+ * @return The new element of the linked list.
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;

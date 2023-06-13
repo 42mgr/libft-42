@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * @file ft_strrchr.c
+ * @brief The ft_strrchr() function locates the last occurrence of c (converted 
+ * to a char) in the string pointed to by s. The terminating null character is 
+ * considered to be part of the string; therefore if c is `\0', the functions 
+ * locate the terminating `\0'.
+ *
+ * @param str The string to be searched.
+ * @param c The character to be located.
+ * @return A pointer to the located character, or NULL if the character does 
+ * not appear in the string.
+ */
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t	i;

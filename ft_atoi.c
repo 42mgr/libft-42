@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * @brief Converts a string to an integer.
+ *
+ * The function converts the initial portion of the string pointed to by nptr to
+ * int representation.
+ *
+ * @param nptr The string to convert.
+ *
+ * @return The converted integer value.
+ */
 int	ft_atoi(const char *nptr)
 {
 	int	sign;

@@ -36,6 +36,17 @@ static char	*ft_i_special(void)
 	return (s);
 }
 
+/**
+ * @brief Converts an integer to a string.
+ *
+ * This function converts the integer passed as argument to a string 
+ * representation.
+ *
+ * @param n The integer to be converted.
+ *
+ * @return The string representation of the integer passed as argument.
+ *         NULL if the allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	char	*s;

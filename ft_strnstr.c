@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/**
+ * @file ft_strnstr.c
+ * @brief Locate a substring in a string, where not more than n characters
+ * are searched.
+ *
+ * @param big The string to search in.
+ * @param little The substring to search for.
+ * @param len The maximum number of characters to search in the string.
+ *
+ * @return A pointer to the first occurrence of the substring in the string, 
+ * or NULL if the substring is not found.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
