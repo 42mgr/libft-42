@@ -27,6 +27,17 @@ static unsigned int	ft_count_len(char const *s, unsigned int start, size_t len)
 	return (len);
 }
 
+/**
+ * @brief Allocates and returns a substring from the string 's'.
+ *
+ * The substring begins at index 'start' and has a maximum length of 'len'.
+ *
+ * @param s The string to create the substring from.
+ * @param start The starting index of the substring in 's'.
+ * @param len The maximum length of the substring.
+ *
+ * @return The substring. NULL if the allocation fails.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*returnstr;

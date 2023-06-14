@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgraf <mgraf@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mgraf <mgraf@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 14:02:45 by mgraf             #+#    #+#             */
-/*   Updated: 2022/12/16 12:18:38 by mgraf            ###   ########.fr       */
+/*   Updated: 2023/06/13 10:03:36 by mgraf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 static int	ft_is_in_set(char c, char *set)
 {
-	int	i;
-
 	if (c)
 	{
-		i = 0;
 		while (*set)
 		{
 			if (*set == c)
@@ -56,6 +53,16 @@ static int	ft_is_end(char *s1, char *set)
 	return (len);
 }
 
+/**
+ * @file ft_strtrim.c
+ * @brief The ft_strtrim function removes the specified characters 
+ * from the beginning and end of a string.
+ *
+ * @param s1 The string to trim.
+ * @param set The set of characters to remove from the beginning 
+ * and end of the string.
+ * @return The trimmed string.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;
@@ -75,7 +82,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // #include <stdio.h>
 // int main (void)
 // {
-// char *s1 = "   am et     "; 
+// char *s1 = "   am et     ";
 // char *set = " et";
 //   printf("String: '%s'\n", s1);
 //   printf("String: '%s'\n", ft_strtrim(s1, set));

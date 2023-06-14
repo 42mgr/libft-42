@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "functional": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c"
+    }
+}

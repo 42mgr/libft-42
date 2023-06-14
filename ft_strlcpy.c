@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * @brief Copy a string to a buffer, ensuring null-termination.
+ *
+ * @param dest The destination buffer.
+ * @param src The source string.
+ * @param destsize The size of the destination buffer.
+ *
+ * @return The length of the source string.
+ */
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t	offset;

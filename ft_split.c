@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgraf <mgraf@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mgraf <mgraf@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 15:20:52 by mgraf             #+#    #+#             */
-/*   Updated: 2022/12/16 13:39:15 by mgraf            ###   ########.fr       */
+/*   Updated: 2023/06/13 10:03:10 by mgraf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 static int	ft_is_in_set(char c, char *set)
 {
-	int	i;
-
 	if (c)
 	{
-		i = 0;
 		while (*set)
 		{
 			if (*set == c)
@@ -94,6 +91,15 @@ void	ft_pop_parts(char **res, char *s, char c, int parts)
 	}
 }
 
+/**
+ * @brief Splits a string into an array of substrings based on a delimiter
+ *  character.
+ *
+ * @param s The string to split.
+ * @param c The delimiter character.
+ *
+ * @return A pointer to the array of substrings or NULL if allocation fails.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**res;

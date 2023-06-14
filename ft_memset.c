@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Fill a byte string with a byte value.
+ *
+ * @param str Pointer to the byte string to be filled.
+ * @param c The byte value to be set.
+ * @param len Number of bytes to be set to the value.
+ * @return A pointer to the memory area str.
+ */
 void	*ft_memset(void *str, int c, unsigned int len)
 {
 	unsigned int	i;
