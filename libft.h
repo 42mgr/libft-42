@@ -6,7 +6,7 @@
 /*   By: mgraf <mgraf@student.42berlin.de>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 17:28:20 by mgraf             #+#    #+#             */
-/*   Updated: 2023/09/20 22:53:02 by mgraf            ###   ########.fr       */
+/*   Updated: 2023/09/24 01:50:14 by mgraf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 # include <unistd.h>
 
 typedef struct s_list
@@ -67,11 +69,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	free_strs(char *str, char **strs);
 
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/uio.h>
-# include <unistd.h>
-
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 101
 # endif
@@ -82,14 +79,14 @@ typedef struct s_lgnl
 	struct s_lgnl	*next;
 }					t_lgnl;
 
-char				*get_next_line(int fd);
-int					found_newline(t_lgnl *stash);
-t_lgnl				*ft_lst_get_last(t_lgnl *stash);
-void				read_and_stash(int fd, t_lgnl **stash);
-void				add_to_stash(t_lgnl **stash, char *buf, int readed);
-void				extract_line(t_lgnl *stash, char **line);
-void				generate_line(char **line, t_lgnl *stash);
-void				clean_stash(t_lgnl **stash);
-//int					ft_strlen(const char *str);
-void				free_stash(t_lgnl *stash, int isEmpty);
+char	*get_next_line(int fd);
+int		found_newline(t_lgnl *stash);
+t_lgnl	*ft_lst_get_last(t_lgnl *stash);
+void	read_and_stash(int fd, t_lgnl **stash);
+void	add_to_stash(t_lgnl **stash, char *buf, int readed);
+void	extract_line(t_lgnl *stash, char **line);
+void	generate_line(char **line, t_lgnl *stash);
+void	clean_stash(t_lgnl **stash);
+//int	ft_strlen(const char *str);
+void	free_stash(t_lgnl *stash, int isEmpty);
 #endif
